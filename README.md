@@ -9,6 +9,14 @@ This is a template for use with the [Leptos](https://github.com/leptos-rs/leptos
 
 ## Run it
 
+Compile tailwind css file
+
+```bash
+npx tailwindcss -i ./tailwind.css -o ./style/output.css
+```
+
+Start leptos server
+
 ```bash
 cargo leptos watch
 ```
