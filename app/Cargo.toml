@@ -21,4 +21,4 @@ thiserror.workspace = true
 default = []
 hydrate = ["leptos/hydrate", "leptos_meta/hydrate", "leptos_router/hydrate"]
 ssr = ["leptos/ssr", "leptos_meta/ssr", "leptos_router/ssr", "dep:leptos_axum",
-"leptos-use/ssr"]
+"leptos-use/ssr", "leptos-use/axum", ]
