@@ -9,16 +9,34 @@ This is a template for use with the [Leptos](https://github.com/leptos-rs/leptos
 
 ## Run it
 
-Compile tailwind css file
+Start leptos server
+
+```bash
+cargo leptos watch
+```
+
+### Optional:
+
+If you want to change the color, you can modified `input.css` file and
+`tailwind.config.js`
+
+Install tailwindcss and these plugins set at `tailwind.config.js`, for my case:
+
+```bash
+npm install -D tailwindcss
+npm install -D @catppuccin/tailwindcss
+```
+
+Compile it:
 
 ```bash
 npx tailwindcss -i ./tailwind.css -o ./style/output.css
 ```
 
-Start leptos server
+or:
 
 ```bash
-cargo leptos watch
+npm run watch
 ```
 
 ## TODO

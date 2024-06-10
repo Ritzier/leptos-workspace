@@ -14,6 +14,7 @@ leptos_meta = { version = "0.6", features = ["nightly"] }
 leptos_router = { version = "0.6", features = ["nightly"] }
 leptos_axum = { version = "0.6" }
 leptos-use = "0.10"
+web-sys = "0.3"
 
 axum = "0.7"
 cfg-if = "1"
@@ -34,7 +35,7 @@ wasm-bindgen = "=0.2.92"
 # that are used together frontend (lib) & server (bin)
 [[workspace.metadata.leptos]]
 # this name is used for the wasm, js and css file names
-name = "start-axum-workspace"
+name = "leptos-workspace"
 
 # the package in the workspace that contains the server binary (binary crate)
 bin-package = "server"
@@ -51,7 +52,7 @@ site-pkg-dir = "pkg"
 
 # [Optional] The source CSS file. If it ends with .sass or .scss then it will be compiled by dart-sass into CSS. The CSS is optimized by Lightning CSS before being written to <site-root>/<site-pkg>/app.css
 # style-file = "style/main.scss"
-
+style-file = "style/output.css"
 tailwind-input-file = "style/output.css"
 
 # Assets source dir. All files found here will be copied and synchronized to site-root.
@@ -94,7 +95,7 @@ bin-default-features = false
 # The features to use when compiling the lib target
 #
 # Optional. Can be over-ridden with the command line parameter --lib-features
-# lib-features = ["hydrate"]
+lib-features = []
 
 # If the --no-default-features flag should be used when compiling the lib target
 #
