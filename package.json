@@ -8,11 +8,6 @@
     "watch": "npx tailwindcss -i ./tailwind.css -o ./style/output.css --watch"
   },
   "devDependencies": {
-    "@catppuccin/tailwindcss": "^0.1.6",
-    "@tailwindcss/forms": "^0.5.7",
     "tailwindcss": "^3.4.4"
-  },
-  "dependencies": {
-    "@tailwindcss/typography": "^0.5.13"
   }
 }
