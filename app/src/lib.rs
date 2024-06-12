@@ -1,12 +1,12 @@
-use crate::error_template::{AppError, ErrorTemplate};
 use crate::components::*;
+use crate::error_template::{AppError, ErrorTemplate};
 
 use leptos::*;
 use leptos_meta::*;
 use leptos_router::*;
 
-pub mod error_template;
 pub mod components;
+pub mod error_template;
 
 #[component]
 pub fn App() -> impl IntoView {
@@ -29,6 +29,7 @@ pub fn App() -> impl IntoView {
                 // class="my-0 mx-auto max-w-3xl text-center"
                 <Routes>
                     <Route path="" view=HomePage/>
+                    <Route path="/demo/catppuccin" view=CatppuccinDemo/>
                 </Routes>
             </main>
         </Router>
