@@ -1,12 +1,12 @@
-use crate::error_template::{AppError, ErrorTemplate};
 use crate::components::*;
+use crate::error_template::{AppError, ErrorTemplate};
 
 use leptos::*;
 use leptos_meta::*;
 use leptos_router::*;
 
-pub mod error_template;
 pub mod components;
+pub mod error_template;
 
 #[component]
 pub fn App() -> impl IntoView {
@@ -19,18 +19,18 @@ pub fn App() -> impl IntoView {
         // sets the document title
         <Title text="Welcome to Leptos"/>
 
+        <Body class="h-screen bg-cpt-base text-cpt-text"/>
+
+        // <Body class="bg-ctp-base"/>
         // content for this welcome page
         <Router fallback=|| {
             let mut outside_errors = Errors::default();
             outside_errors.insert_with_default_key(AppError::NotFound);
             view! { <ErrorTemplate outside_errors/> }.into_view()
         }>
-            <main>
-                // class="my-0 mx-auto max-w-3xl text-center"
-                <Routes>
-                    <Route path="" view=HomePage/>
-                </Routes>
-            </main>
+            <Routes>
+                <Route path="" view=HomePage/>
+            </Routes>
         </Router>
     }
 }
