@@ -1,5 +1,4 @@
-mod demo;
 mod home;
-
-pub use demo::*;
+mod nav_bar;
 pub use home::HomePage;
+pub use nav_bar::*;

@@ -19,19 +19,24 @@ pub fn App() -> impl IntoView {
         // sets the document title
         <Title text="Welcome to Leptos"/>
 
+        <Body class="h-screen bg-cpt-base text-cpt-text"/>
+
+        // <Body class="bg-ctp-base"/>
         // content for this welcome page
         <Router fallback=|| {
             let mut outside_errors = Errors::default();
             outside_errors.insert_with_default_key(AppError::NotFound);
             view! { <ErrorTemplate outside_errors/> }.into_view()
         }>
-            <main>
-                // class="my-0 mx-auto max-w-3xl text-center"
-                <Routes>
-                    <Route path="" view=HomePage/>
-                    <Route path="/demo/catppuccin" view=CatppuccinDemo/>
-                </Routes>
-            </main>
+
+            // <NavBar/>
+            // <NavBar/>
+            <NavBar/>
+
+            <Routes>
+                <Route path="" view=HomePage/>
+                <Route path="/demo" view=HomePage/>
+            </Routes>
         </Router>
     }
 }
