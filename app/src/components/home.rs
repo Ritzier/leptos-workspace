@@ -3,7 +3,7 @@ use leptos_use::*;
 
 #[component]
 pub fn HomePage() -> impl IntoView {
-    let UseColorModeReturn { set_mode, .. } = use_color_mode_with_options(
+    let UseColorModeReturn { set_mode, mode, .. } = use_color_mode_with_options(
         UseColorModeOptions::default()
             .custom_modes(vec![
                 "ctp-latte".into(),

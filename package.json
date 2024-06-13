@@ -8,9 +8,7 @@
     "watch": "npx tailwindcss -i ./tailwind.css -o ./style/output.css --watch"
   },
   "devDependencies": {
+    "@catppuccin/tailwindcss": "^0.1.6",
     "tailwindcss": "^3.4.4"
-  },
-  "dependencies": {
-    "@catppuccin/tailwindcss": "^0.1.6"
   }
 }

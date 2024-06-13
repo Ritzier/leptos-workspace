@@ -670,45 +670,6 @@ video {
   --tw-contain-style:  ;
 }
 
-.container {
-  width: 100%;
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -729,10 +690,6 @@ video {
   min-height: 100vh;
 }
 
-.max-w-lg {
-  max-width: 32rem;
-}
-
 .flex-col {
   flex-direction: column;
 }
@@ -743,12 +700,6 @@ video {
 
 .justify-center {
   justify-content: center;
-}
-
-.space-y-2 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
 .rounded-xl {
@@ -788,6 +739,10 @@ video {
 .bg-ctp-mauve {
   --tw-bg-opacity: 1;
   background-color: rgba(var(--ctp-mauve), var(--tw-bg-opacity));
+}
+
+.bg-ctp-overlay0\/50 {
+  background-color: rgba(var(--ctp-overlay0), 0.5);
 }
 
 .bg-ctp-peach {
@@ -830,10 +785,6 @@ video {
   background-color: rgba(var(--ctp-yellow), var(--tw-bg-opacity));
 }
 
-.bg-ctp-overlay0\/50 {
-  background-color: rgba(var(--ctp-overlay0), 0.5);
-}
-
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -868,14 +819,14 @@ video {
   padding: 1.5rem;
 }
 
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .text-ctp-subtext0 {
@@ -892,10 +843,10 @@ video {
   outline-color: rgb(var(--ctp-pink));
 }
 
-.transition-colors {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+/* Nav */
+
+#color-scheme-list li {
+  padding: 10px;
 }
 
 .App {
@@ -1041,6 +992,88 @@ video {
 
 .navbutton-right:active {
   background-color: rgba(var(--ctp-pink), 0.8);
+}
+
+/* Navbar container */
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  /* Important for vertical align on mobile phones */
+  margin: 0;
+  /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .hover\:bg-ctp-mauve:hover {
