@@ -3,7 +3,7 @@ use leptos_use::*;
 
 #[component]
 pub fn NavBar() -> impl IntoView {
-    let UseColorModeReturn { set_mode, mode, .. } = use_color_mode_with_options(
+    let UseColorModeReturn { set_mode, .. } = use_color_mode_with_options(
         UseColorModeOptions::default()
             .custom_modes(vec![
                 "ctp-latte".into(),
@@ -16,8 +16,6 @@ pub fn NavBar() -> impl IntoView {
     view! {
         <nav class="navbar">
             <a href="/">Home</a>
-
-            <ThemeSide/>
 
             <a href="/examples">Example</a>
 
@@ -45,9 +43,4 @@ pub fn NavBar() -> impl IntoView {
 
         </nav>
     }
-}
-
-#[component]
-fn ThemeSide() -> impl IntoView {
-    view! {}
 }
