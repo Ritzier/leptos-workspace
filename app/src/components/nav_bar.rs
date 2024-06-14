@@ -19,7 +19,7 @@ pub fn NavBar() -> impl IntoView {
 
             <ThemeSide/>
 
-            <a href="/example">Example</a>
+            <a href="/examples">Example</a>
 
             <div class="nav-dropdown">
                 <button class="nav-dropbtn">ColorScheme</button>
