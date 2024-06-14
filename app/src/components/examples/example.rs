@@ -7,7 +7,7 @@ pub fn Page() -> impl IntoView {
         <h1>"Examples"</h1>
         <ul>
             <li>
-                <A href="catppuccin">Catppuccin</A>
+                <A href="/catppuccin">Catppuccin</A>
             </li>
         </ul>
     }

@@ -37,15 +37,9 @@ pub fn App() -> impl IntoView {
                 // <Route path="" view=HomePage/>
                 <Route path="/" view=HomePage/>
 
+                <Route path="/examples" view=ExamplePage/>
+
                 <Route path="/catppuccin" view=CatppuccinPage/>
-
-                <Route path="/example" view=ExamplePage>
-                    <Route path="catppuccin" view=CatppuccinPage>
-                        <Route path="" view=|| view! { "hi" }/>
-                    </Route>
-
-                    <Route path="" view=|| view! { "hi" }/>
-                </Route>
 
             </Routes>
         </Router>
