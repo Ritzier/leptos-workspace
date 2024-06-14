@@ -16,43 +16,38 @@ pub fn NavBar() -> impl IntoView {
     view! {
         <nav class="navbar">
             <a href="/">Home</a>
-            <div class="dropdown">
-                <button class="dropbtn">ColorScheme <i class="fa fa-caret-down"></i></button>
 
-                <div class="dropdown-content">
-                    <button
-                        on:click=move |_| { set_mode.set(ColorMode::Custom("ctp-latte".into())) }
+            <ThemeSide/>
 
-                        class="navbutton-left bg-ctp-overlay0/50"
-                    >
-                        Latte
-                    </button>
+            <a href="/example">Example</a>
 
-                    <button
-                        on:click=move |_| { set_mode.set(ColorMode::Custom("ctp-frappe".into())) }
+            <div class="nav-dropdown">
+                <button class="nav-dropbtn">ColorScheme</button>
+                <div class="nav-dropdown-content">
+                    <button on:click=move |_| {
+                        set_mode.set(ColorMode::Custom("ctp-latte".into()))
+                    }>Latte</button>
 
-                        class="navbutton-center bg-ctp-overlay0/50"
-                    >
-                        Frappe
-                    </button>
-                    <button
-                        on:click=move |_| {
-                            set_mode.set(ColorMode::Custom("ctp-macchiato".into()))
-                        }
+                    <button on:click=move |_| {
+                        set_mode.set(ColorMode::Custom("ctp-frappe".into()))
+                    }>Frappe</button>
+                    <button on:click=move |_| {
+                        set_mode.set(ColorMode::Custom("ctp-macchiato".into()))
+                    }>
 
-                        class="navbutton-center bg-ctp-overlay0/50"
-                    >
                         Macchiato
                     </button>
-                    <button
-                        on:click=move |_| { set_mode.set(ColorMode::Custom("ctp-mocha".into())) }
-
-                        class="navbutton-right bg-ctp-overlay0/50"
-                    >
-                        Mocha
-                    </button>
+                    <button on:click=move |_| {
+                        set_mode.set(ColorMode::Custom("ctp-mocha".into()))
+                    }>Mocha</button>
                 </div>
             </div>
+
         </nav>
     }
+}
+
+#[component]
+fn ThemeSide() -> impl IntoView {
+    view! {}
 }

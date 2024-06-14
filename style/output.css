@@ -90,6 +90,70 @@
   border-radius: 9999px;
 }
 
+/* NavBar */
+
+.navbar {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: rgba(var(--ctp-overlay0), 0.5);
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* The container <div> - needed to position the dropdown content */
+
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Button */
+
+.nav-dropbtn {
+  background-color: bg-ctp-overlay0/50;
+}
+
+/* Dropdown Content (Hidden by Default) */
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: bg-ctp-overlay0/50;
+  /*min-width: 160px;*/
+  /*box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);*/
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+
+.nav-dropdown-content button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+
+.nav-dropdown-content button:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+
+.nav-dropdown:hover .nav-dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+.nav-dropdown:hover .nav-dropbtn {
+  background-color: #3e8e41;
+}
+
 /* ! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com */
 
 /*
@@ -931,61 +995,6 @@ video {
 
 .outline-ctp-pink {
   outline-color: rgb(var(--ctp-pink));
-}
-
-.navbutton-left {
-  border-top-left-radius: 0.75rem;
-  border-bottom-left-radius: 0.75rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-right: 0.5rem;
-  padding-left: 1rem;
-  outline-style: solid;
-  outline-width: 1px;
-  outline-color: rgba(var(--ctp-overlay2), 0.1);
-}
-
-.navbutton-left:hover {
-  background-color: rgba(var(--ctp-pink), 0.5);
-}
-
-.navbutton-left:active {
-  background-color: rgba(var(--ctp-pink), 0.8);
-}
-
-.navbutton-center {
-  padding: 0.5rem;
-  outline-style: solid;
-  outline-width: 1px;
-  outline-color: rgba(var(--ctp-overlay2), 0.1);
-}
-
-.navbutton-center:hover {
-  background-color: rgba(var(--ctp-pink), 0.5);
-}
-
-.navbutton-center:active {
-  background-color: rgba(var(--ctp-pink), 0.8);
-}
-
-.navbutton-right {
-  border-top-right-radius: 0.75rem;
-  border-bottom-right-radius: 0.75rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 0.5rem;
-  padding-right: 1rem;
-  outline-style: solid;
-  outline-width: 1px;
-  outline-color: rgba(var(--ctp-overlay2), 0.1);
-}
-
-.navbutton-right:hover {
-  background-color: rgba(var(--ctp-pink), 0.5);
-}
-
-.navbutton-right:active {
-  background-color: rgba(var(--ctp-pink), 0.8);
 }
 
 .hover\:bg-ctp-mauve:hover {
