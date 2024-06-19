@@ -4,10 +4,5 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [
-    require("@catppuccin/tailwindcss")({
-      prefix: "ctp",
-      defaultFlavour: "latte",
-    }),
-  ],
+  plugins: [],
 };

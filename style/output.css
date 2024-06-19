@@ -1,215 +1,6 @@
-/* For Catppuccin example */
-
-.App {
-  grid-template-rows: 1fr auto;
-}
-
-#card {
-  display: flex;
-  width: auto;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 1.5rem;
-  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-  padding: 1.5rem;
-  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  outline-style: solid;
-  outline-width: 2px;
-}
-
-@media (min-width: 768px) {
-  #card {
-    width: 50%;
-  }
-}
-
-@media (min-width: 1536px) {
-  #card {
-    width: 25%;
-  }
-}
-
-#card h1 {
-  margin-bottom: 1rem;
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  -webkit-background-clip: text;
-          background-clip: text;
-  font-size: 3rem;
-  line-height: 1;
-  font-weight: 900;
-  color: transparent;
-}
-
-@media (min-width: 1024px) {
-  #card h1 {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-}
-
-#card p {
-  margin-bottom: 1rem;
-  text-align: center;
-  font-weight: 700;
-}
-
-#card button {
-  border-radius: 0.75rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-weight: 700;
-  --tw-text-opacity: 1;
-  color: rgba(var(--ctp-base), var(--tw-text-opacity));
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-duration: 300ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-#palette {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  display: grid;
-  grid-auto-rows: auto;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-  justify-items: center;
-  gap: 1rem;
-}
-
-#palette > * {
-  height: 1.5rem;
-  width: 1.5rem;
-  border-radius: 9999px;
-}
-
-.navbutton-left {
-  border-top-left-radius: 0.75rem;
-  border-bottom-left-radius: 0.75rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-right: 0.5rem;
-  padding-left: 1rem;
-  outline-style: solid;
-  outline-width: 1px;
-  outline-color: rgba(var(--ctp-overlay2), 0.1);
-}
-
-.navbutton-left:hover {
-  background-color: rgba(var(--ctp-pink), 0.5);
-}
-
-.navbutton-left:active {
-  background-color: rgba(var(--ctp-pink), 0.8);
-}
-
-.navbutton-center {
-  padding: 0.5rem;
-  outline-style: solid;
-  outline-width: 1px;
-  outline-color: rgba(var(--ctp-overlay2), 0.1);
-}
-
-.navbutton-center:hover {
-  background-color: rgba(var(--ctp-pink), 0.5);
-}
-
-.navbutton-center:active {
-  background-color: rgba(var(--ctp-pink), 0.8);
-}
-
-.navbutton-right {
-  border-top-right-radius: 0.75rem;
-  border-bottom-right-radius: 0.75rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 0.5rem;
-  padding-right: 1rem;
-  outline-style: solid;
-  outline-width: 1px;
-  outline-color: rgba(var(--ctp-overlay2), 0.1);
-}
-
-.navbutton-right:hover {
-  background-color: rgba(var(--ctp-pink), 0.5);
-}
-
-.navbutton-right:active {
-  background-color: rgba(var(--ctp-pink), 0.8);
-}
-
-/* NavBar */
-
-.navbar {
-  margin-top: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  background-color: rgba(var(--ctp-overlay0), 0.5);
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-/* The container <div> - needed to position the dropdown content */
-
-.nav-dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Button */
-
-.nav-dropbtn {
-  background-color: bg-ctp-overlay0/50;
-}
-
-/* Dropdown Content (Hidden by Default) */
-
-.nav-dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: bg-ctp-overlay0/50;
-  /*min-width: 160px;*/
-  /*box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);*/
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-
-.nav-dropdown-content button {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-
-.nav-dropdown-content button:hover {
-  background-color: #ddd;
-}
-
-/* Show the dropdown menu on hover */
-
-.nav-dropdown:hover .nav-dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-
-.nav-dropdown:hover .nav-dropbtn {
-  background-color: #3e8e41;
-}
-
-/* ! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com */
+/*
+! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com
+*/
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -655,122 +446,6 @@ video {
   display: none;
 }
 
-:root {
-  --ctp-rosewater: 220, 138, 120;
-  --ctp-flamingo: 221, 120, 120;
-  --ctp-pink: 234, 118, 203;
-  --ctp-mauve: 136, 57, 239;
-  --ctp-red: 210, 15, 57;
-  --ctp-maroon: 230, 69, 83;
-  --ctp-peach: 254, 100, 11;
-  --ctp-yellow: 223, 142, 29;
-  --ctp-green: 64, 160, 43;
-  --ctp-teal: 23, 146, 153;
-  --ctp-sky: 4, 165, 229;
-  --ctp-sapphire: 32, 159, 181;
-  --ctp-blue: 30, 102, 245;
-  --ctp-lavender: 114, 135, 253;
-  --ctp-text: 76, 79, 105;
-  --ctp-subtext1: 92, 95, 119;
-  --ctp-subtext0: 108, 111, 133;
-  --ctp-overlay2: 124, 127, 147;
-  --ctp-overlay1: 140, 143, 161;
-  --ctp-overlay0: 156, 160, 176;
-  --ctp-surface2: 172, 176, 190;
-  --ctp-surface1: 188, 192, 204;
-  --ctp-surface0: 204, 208, 218;
-  --ctp-base: 239, 241, 245;
-  --ctp-mantle: 230, 233, 239;
-  --ctp-crust: 220, 224, 232;
-}
-
-.ctp-frappe {
-  --ctp-rosewater: 242, 213, 207;
-  --ctp-flamingo: 238, 190, 190;
-  --ctp-pink: 244, 184, 228;
-  --ctp-mauve: 202, 158, 230;
-  --ctp-red: 231, 130, 132;
-  --ctp-maroon: 234, 153, 156;
-  --ctp-peach: 239, 159, 118;
-  --ctp-yellow: 229, 200, 144;
-  --ctp-green: 166, 209, 137;
-  --ctp-teal: 129, 200, 190;
-  --ctp-sky: 153, 209, 219;
-  --ctp-sapphire: 133, 193, 220;
-  --ctp-blue: 140, 170, 238;
-  --ctp-lavender: 186, 187, 241;
-  --ctp-text: 198, 208, 245;
-  --ctp-subtext1: 181, 191, 226;
-  --ctp-subtext0: 165, 173, 206;
-  --ctp-overlay2: 148, 156, 187;
-  --ctp-overlay1: 131, 139, 167;
-  --ctp-overlay0: 115, 121, 148;
-  --ctp-surface2: 98, 104, 128;
-  --ctp-surface1: 81, 87, 109;
-  --ctp-surface0: 65, 69, 89;
-  --ctp-base: 48, 52, 70;
-  --ctp-mantle: 41, 44, 60;
-  --ctp-crust: 35, 38, 52;
-}
-
-.ctp-macchiato {
-  --ctp-rosewater: 244, 219, 214;
-  --ctp-flamingo: 240, 198, 198;
-  --ctp-pink: 245, 189, 230;
-  --ctp-mauve: 198, 160, 246;
-  --ctp-red: 237, 135, 150;
-  --ctp-maroon: 238, 153, 160;
-  --ctp-peach: 245, 169, 127;
-  --ctp-yellow: 238, 212, 159;
-  --ctp-green: 166, 218, 149;
-  --ctp-teal: 139, 213, 202;
-  --ctp-sky: 145, 215, 227;
-  --ctp-sapphire: 125, 196, 228;
-  --ctp-blue: 138, 173, 244;
-  --ctp-lavender: 183, 189, 248;
-  --ctp-text: 202, 211, 245;
-  --ctp-subtext1: 184, 192, 224;
-  --ctp-subtext0: 165, 173, 203;
-  --ctp-overlay2: 147, 154, 183;
-  --ctp-overlay1: 128, 135, 162;
-  --ctp-overlay0: 110, 115, 141;
-  --ctp-surface2: 91, 96, 120;
-  --ctp-surface1: 73, 77, 100;
-  --ctp-surface0: 54, 58, 79;
-  --ctp-base: 36, 39, 58;
-  --ctp-mantle: 30, 32, 48;
-  --ctp-crust: 24, 25, 38;
-}
-
-.ctp-mocha {
-  --ctp-rosewater: 245, 224, 220;
-  --ctp-flamingo: 242, 205, 205;
-  --ctp-pink: 245, 194, 231;
-  --ctp-mauve: 203, 166, 247;
-  --ctp-red: 243, 139, 168;
-  --ctp-maroon: 235, 160, 172;
-  --ctp-peach: 250, 179, 135;
-  --ctp-yellow: 249, 226, 175;
-  --ctp-green: 166, 227, 161;
-  --ctp-teal: 148, 226, 213;
-  --ctp-sky: 137, 220, 235;
-  --ctp-sapphire: 116, 199, 236;
-  --ctp-blue: 137, 180, 250;
-  --ctp-lavender: 180, 190, 254;
-  --ctp-text: 205, 214, 244;
-  --ctp-subtext1: 186, 194, 222;
-  --ctp-subtext0: 166, 173, 200;
-  --ctp-overlay2: 147, 153, 178;
-  --ctp-overlay1: 127, 132, 156;
-  --ctp-overlay0: 108, 112, 134;
-  --ctp-surface2: 88, 91, 112;
-  --ctp-surface1: 69, 71, 90;
-  --ctp-surface0: 49, 50, 68;
-  --ctp-base: 30, 30, 46;
-  --ctp-mantle: 24, 24, 37;
-  --ctp-crust: 17, 17, 27;
-}
-
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -879,6 +554,14 @@ video {
   --tw-contain-style:  ;
 }
 
+.col-start-2 {
+  grid-column-start: 2;
+}
+
+.row-span-2 {
+  grid-row: span 2 / span 2;
+}
+
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -891,12 +574,16 @@ video {
   display: grid;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
 .min-h-screen {
   min-height: 100vh;
+}
+
+.w-1\/5 {
+  width: 20%;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -911,117 +598,25 @@ video {
   justify-content: center;
 }
 
+.gap-4 {
+  gap: 1rem;
+}
+
 .rounded-xl {
   border-radius: 0.75rem;
 }
 
-.bg-ctp-base {
-  --tw-bg-opacity: 1;
-  background-color: rgba(var(--ctp-base), var(--tw-bg-opacity));
+.border {
+  border-width: 1px;
 }
 
-.bg-ctp-blue {
+.bg-gray-300 {
   --tw-bg-opacity: 1;
-  background-color: rgba(var(--ctp-blue), var(--tw-bg-opacity));
-}
-
-.bg-ctp-flamingo {
-  --tw-bg-opacity: 1;
-  background-color: rgba(var(--ctp-flamingo), var(--tw-bg-opacity));
-}
-
-.bg-ctp-green {
-  --tw-bg-opacity: 1;
-  background-color: rgba(var(--ctp-green), var(--tw-bg-opacity));
-}
-
-.bg-ctp-lavender {
-  --tw-bg-opacity: 1;
-  background-color: rgba(var(--ctp-lavender), var(--tw-bg-opacity));
-}
-
-.bg-ctp-maroon {
-  --tw-bg-opacity: 1;
-  background-color: rgba(var(--ctp-maroon), var(--tw-bg-opacity));
-}
-
-.bg-ctp-mauve {
-  --tw-bg-opacity: 1;
-  background-color: rgba(var(--ctp-mauve), var(--tw-bg-opacity));
-}
-
-.bg-ctp-overlay0\/50 {
-  background-color: rgba(var(--ctp-overlay0), 0.5);
-}
-
-.bg-ctp-peach {
-  --tw-bg-opacity: 1;
-  background-color: rgba(var(--ctp-peach), var(--tw-bg-opacity));
-}
-
-.bg-ctp-pink {
-  --tw-bg-opacity: 1;
-  background-color: rgba(var(--ctp-pink), var(--tw-bg-opacity));
-}
-
-.bg-ctp-red {
-  --tw-bg-opacity: 1;
-  background-color: rgba(var(--ctp-red), var(--tw-bg-opacity));
-}
-
-.bg-ctp-rosewater {
-  --tw-bg-opacity: 1;
-  background-color: rgba(var(--ctp-rosewater), var(--tw-bg-opacity));
-}
-
-.bg-ctp-sapphire {
-  --tw-bg-opacity: 1;
-  background-color: rgba(var(--ctp-sapphire), var(--tw-bg-opacity));
-}
-
-.bg-ctp-sky {
-  --tw-bg-opacity: 1;
-  background-color: rgba(var(--ctp-sky), var(--tw-bg-opacity));
-}
-
-.bg-ctp-teal {
-  --tw-bg-opacity: 1;
-  background-color: rgba(var(--ctp-teal), var(--tw-bg-opacity));
-}
-
-.bg-ctp-yellow {
-  --tw-bg-opacity: 1;
-  background-color: rgba(var(--ctp-yellow), var(--tw-bg-opacity));
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-}
-
-.from-ctp-base {
-  --tw-gradient-from: rgb(var(--ctp-base)) var(--tw-gradient-from-position);
-  --tw-gradient-to: rgba(var(--ctp-base), 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.from-ctp-mantle {
-  --tw-gradient-from: rgb(var(--ctp-mantle)) var(--tw-gradient-from-position);
-  --tw-gradient-to: rgba(var(--ctp-mantle), 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.from-ctp-pink {
-  --tw-gradient-from: rgb(var(--ctp-pink)) var(--tw-gradient-from-position);
-  --tw-gradient-to: rgba(var(--ctp-pink), 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.to-ctp-crust {
-  --tw-gradient-to: rgb(var(--ctp-crust)) var(--tw-gradient-to-position);
-}
-
-.to-ctp-mauve {
-  --tw-gradient-to: rgb(var(--ctp-mauve)) var(--tw-gradient-to-position);
 }
 
 .p-6 {
@@ -1038,25 +633,6 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.text-ctp-subtext0 {
-  --tw-text-opacity: 1;
-  color: rgba(var(--ctp-subtext0), var(--tw-text-opacity));
-}
-
-.text-ctp-text {
-  --tw-text-opacity: 1;
-  color: rgba(var(--ctp-text), var(--tw-text-opacity));
-}
-
-.outline-ctp-pink {
-  outline-color: rgb(var(--ctp-pink));
-}
-
-.hover\:bg-ctp-mauve:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgba(var(--ctp-mauve), var(--tw-bg-opacity));
-}
-
-.active\:bg-ctp-mauve\/75:active {
-  background-color: rgba(var(--ctp-mauve), 0.75);
+.text-center {
+  text-align: center;
 }

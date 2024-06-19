@@ -19,8 +19,6 @@ pub fn App() -> impl IntoView {
         // sets the document title
         <Title text="Welcome to Leptos"/>
 
-        <Body class="h-screen bg-cpt-base text-cpt-text"/>
-
         // <Body class="bg-ctp-base"/>
         // content for this welcome page
         <Router fallback=|| {
@@ -29,17 +27,11 @@ pub fn App() -> impl IntoView {
             view! { <ErrorTemplate outside_errors/> }.into_view()
         }>
 
-            // <NavBar/>
-            // <NavBar/>
             <NavBar/>
 
             <Routes>
                 // <Route path="" view=HomePage/>
                 <Route path="/" view=HomePage/>
-
-                <Route path="/examples" view=ExamplePage/>
-
-                <Route path="/catppuccin" view=CatppuccinPage/>
 
             </Routes>
         </Router>
