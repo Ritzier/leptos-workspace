@@ -45,3 +45,25 @@
 .nav-dropdown:hover .nav-dropbtn {
   background-color: #3e8e41;
 }
+
+.navbar-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.navbar-dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.navbar-dropdown-content div {
+  color: black;
+  padding: 12px 16px;
+  text-decoratoin: none;
+  display: block;
+}
+
+.navbar-dropdown:hover .navbar-dropdown-content {
+  display: block;
+}

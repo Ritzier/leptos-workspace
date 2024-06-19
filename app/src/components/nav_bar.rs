@@ -41,6 +41,15 @@ pub fn NavBar() -> impl IntoView {
                 </div>
             </div>
 
+            <div class="navbar-dropdown">
+                <span href="">A</span>
+                <div class="navbar-dropdown-content">
+                    <div>A</div>
+                    <div>A</div>
+                    <div>A</div>
+                </div>
+            </div>
+
         </nav>
     }
 }
