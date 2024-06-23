@@ -51,5 +51,8 @@ pub fn NavBar() -> impl IntoView {
             </div>
 
         </nav>
+
+        <nav>
+        </nav>
     }
 }

@@ -1,237 +1,6 @@
-/* For Catppuccin example */
-
-.App {
-  grid-template-rows: 1fr auto;
-}
-
-#card {
-  display: flex;
-  width: auto;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 1.5rem;
-  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-  padding: 1.5rem;
-  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  outline-style: solid;
-  outline-width: 2px;
-}
-
-@media (min-width: 768px) {
-  #card {
-    width: 50%;
-  }
-}
-
-@media (min-width: 1536px) {
-  #card {
-    width: 25%;
-  }
-}
-
-#card h1 {
-  margin-bottom: 1rem;
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  -webkit-background-clip: text;
-          background-clip: text;
-  font-size: 3rem;
-  line-height: 1;
-  font-weight: 900;
-  color: transparent;
-}
-
-@media (min-width: 1024px) {
-  #card h1 {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-}
-
-#card p {
-  margin-bottom: 1rem;
-  text-align: center;
-  font-weight: 700;
-}
-
-#card button {
-  border-radius: 0.75rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-weight: 700;
-  --tw-text-opacity: 1;
-  color: rgba(var(--ctp-base), var(--tw-text-opacity));
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-duration: 300ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-#palette {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  display: grid;
-  grid-auto-rows: auto;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-  justify-items: center;
-  gap: 1rem;
-}
-
-#palette > * {
-  height: 1.5rem;
-  width: 1.5rem;
-  border-radius: 9999px;
-}
-
-.navbutton-left {
-  border-top-left-radius: 0.75rem;
-  border-bottom-left-radius: 0.75rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-right: 0.5rem;
-  padding-left: 1rem;
-  outline-style: solid;
-  outline-width: 1px;
-  outline-color: rgba(var(--ctp-overlay2), 0.1);
-}
-
-.navbutton-left:hover {
-  background-color: rgba(var(--ctp-pink), 0.5);
-}
-
-.navbutton-left:active {
-  background-color: rgba(var(--ctp-pink), 0.8);
-}
-
-.navbutton-center {
-  padding: 0.5rem;
-  outline-style: solid;
-  outline-width: 1px;
-  outline-color: rgba(var(--ctp-overlay2), 0.1);
-}
-
-.navbutton-center:hover {
-  background-color: rgba(var(--ctp-pink), 0.5);
-}
-
-.navbutton-center:active {
-  background-color: rgba(var(--ctp-pink), 0.8);
-}
-
-.navbutton-right {
-  border-top-right-radius: 0.75rem;
-  border-bottom-right-radius: 0.75rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 0.5rem;
-  padding-right: 1rem;
-  outline-style: solid;
-  outline-width: 1px;
-  outline-color: rgba(var(--ctp-overlay2), 0.1);
-}
-
-.navbutton-right:hover {
-  background-color: rgba(var(--ctp-pink), 0.5);
-}
-
-.navbutton-right:active {
-  background-color: rgba(var(--ctp-pink), 0.8);
-}
-
-/* NavBar */
-
-.navbar {
-  margin-top: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  background-color: rgba(var(--ctp-overlay0), 0.5);
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-/* The container <div> - needed to position the dropdown content */
-
-.nav-dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Button */
-
-.nav-dropbtn {
-  background-color: bg-ctp-overlay0/50;
-}
-
-/* Dropdown Content (Hidden by Default) */
-
-.nav-dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: bg-ctp-overlay0/50;
-  /*min-width: 160px;*/
-  /*box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);*/
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-
-.nav-dropdown-content button {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-
-.nav-dropdown-content button:hover {
-  background-color: #ddd;
-}
-
-/* Show the dropdown menu on hover */
-
-.nav-dropdown:hover .nav-dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-
-.nav-dropdown:hover .nav-dropbtn {
-  background-color: #3e8e41;
-}
-
-.navbar-dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.navbar-dropdown-content {
-  display: none;
-  position: absolute;
-  z-index: 1;
-}
-
-.navbar-dropdown-content div {
-  color: black;
-  padding: 12px 16px;
-  text-decoratoin: none;
-  display: block;
-}
-
-.navbar-dropdown:hover .navbar-dropdown-content {
-  display: block;
-}
-
-/* ! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com */
+/*
+! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com
+*/
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -921,8 +690,16 @@ video {
   min-height: 100vh;
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-center {
@@ -931,6 +708,15 @@ video {
 
 .justify-center {
   justify-content: center;
+}
+
+.gap-x-3 {
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+}
+
+.gap-y-1 {
+  row-gap: 0.25rem;
 }
 
 .rounded-xl {
@@ -1070,6 +856,11 @@ video {
   color: rgba(var(--ctp-text), var(--tw-text-opacity));
 }
 
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .outline-ctp-pink {
   outline-color: rgb(var(--ctp-pink));
 }
@@ -1077,6 +868,10 @@ video {
 .hover\:bg-ctp-mauve:hover {
   --tw-bg-opacity: 1;
   background-color: rgba(var(--ctp-mauve), var(--tw-bg-opacity));
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
 }
 
 .active\:bg-ctp-mauve\/75:active {
